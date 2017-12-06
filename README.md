@@ -265,3 +265,4 @@ eleFile.addEventListener('change', function (event) {
     }
 });
 ```
+[FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL)
