@@ -182,3 +182,5 @@ var canvasBarrage = function (canvas, data) {
 
 canvasBarrage('#canvasBarrage', dataBarrage);
 ```
+
+[配合视频完整demo](http://www.zhangxinxu.com/study/201709/canvas-barrage-video-demo.html)
