@@ -184,3 +184,8 @@ canvasBarrage('#canvasBarrage', dataBarrage);
 ```
 
 [配合视频完整demo](http://www.zhangxinxu.com/study/201709/canvas-barrage-video-demo.html)
+
+
+## 百分比padding与固定比例图片自适应布局
+[点击查看demo](http://www.zhangxinxu.com/study/201708/percent-padding-auto-layout.html)
+
