@@ -266,3 +266,38 @@ eleFile.addEventListener('change', function (event) {
 });
 ```
 [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL)
+
+## 使用JS把文本内容作为html文件下载
+
+[查看demo](http://www.zhangxinxu.com/study/201707/js-text-download-as-html-file.html)
+```
+var eleTextarea = document.querySelector('textarea');
+var eleButton = document.querySelector('input[type="button"]');
+
+// 下载文件方法
+var funDownload = function (content, filename) {
+    var eleLink = document.createElement('a');
+    eleLink.download = filename;
+    eleLink.style.display = 'none';
+    // 字符内容转变成blob地址
+    var blob = new Blob([content]);
+    eleLink.href = URL.createObjectURL(blob);
+    // 触发点击
+    document.body.appendChild(eleLink);
+    eleLink.click();
+    // 然后移除
+    document.body.removeChild(eleLink);
+};
+
+if ('download' in document.createElement('a')) {
+    // 作为test.html文件下载
+    eleButton.addEventListener('click', function () {
+        funDownload(eleTextarea.value, 'test.html');    
+    });
+} else {
+    eleButton.onclick = function () {
+        alert('浏览器不支持');    
+    };
+}
+```
+[关于Blog](https://developer.mozilla.org/zh-CN/docs/Web/API/Blob)
